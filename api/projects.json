@@ -6,11 +6,12 @@ layout: null
     {% assign projects = site.projects | sort: 'date' %}
     {% for project in projects reversed %}
     {
-      "name": "{{ project.title }}",
+      "title": "{{ project.title }}",
       "description": "{{ project.description }}",
       "url": "{{ project.url | prepend: site.baseurl | prepend: site.url }}",
       "tags": ["{{ project.tags | join: '","' }}"],
-      "type": "{{ project.type }}"
+      "type": "{{ project.type }}",
+      "date": "{{ project.date | date: '%B %Y' }}"
     },
     {% endfor %}
     {}

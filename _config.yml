@@ -39,4 +39,18 @@ permalink: pretty
 paginate: 5
 sass:
   style: compressed
-exclude: ["LICENSE","node_modules","Gulpfile.js","package.json","README.md",".babelrc",".gitignore","less","js/vendor","js/site","js/maths-problems/*"]
+exclude: [
+  "Gemfile"
+  "LICENSE",
+  "node_modules",
+  "Gulpfile.js",
+  "Gulp.config.json",
+  "package.json",
+  "README.md",
+  ".babelrc",
+  ".gitignore",
+  "js/vendor",
+  "js/site",
+  "js/maths-problems/*",
+  "js/projects/*"
+]

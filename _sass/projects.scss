@@ -1,9 +1,3 @@
-.filter-toggler {
-	position: relative;
-	top: -.25em;
-	padding-left: 1em;
-	font-size: .5em;
-}
 .filter-toggler:link,
 .filter-toggler:visited,
 .filter-toggler.collapsed:active
@@ -16,7 +10,7 @@
 .filter-toggler.collapsed:active
 {
 	color: #404040;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 // Featured projects

@@ -1,4 +1,40 @@
 {
+    "js:vue": {
+        "projects": {
+            "entries": "js/projects/src/projects.js",
+            "rn": "projects.dist.js",
+            "dest": "js/projects/dist"
+        },
+        "maths-problems": {
+            "entries": "js/maths-problems/src/app.js",
+            "rn": "maths-problems.dist.js",
+            "dest": "js/maths-problems/dist"
+        }
+    },
+    "uglify": {
+        "main": {
+            "src": "js/site/clean-blog.js",
+            "rn": "clean-blog.min.js",
+            "dest": "js/site"
+        },
+        "cssrelpreload": {
+            "src": "_includes/js/cssrelpreload.js",
+            "rn": "cssrelpreload.min.js",
+            "dest": "_includes/js"
+        },
+        "projects": {
+            "dependsOn": [ "js:vue:projects" ],
+            "src": "js/projects/dist/projects.dist.js",
+            "rn": "projects.min.js",
+            "dest": "js"
+        },
+        "maths-problems": {
+            "dependsOn": [ "js:vue:maths-problems" ],
+            "src": "js/maths-problems/dist/maths-problems.dist.js",
+            "rn": "maths-problems.min.js",
+            "dest": "js"
+        }
+    },
     "concat:js": {
         "files": [
             "js/vendor/jquery.min.js",
