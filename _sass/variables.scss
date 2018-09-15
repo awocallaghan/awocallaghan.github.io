@@ -1,11 +1,22 @@
 // Variables
 
 // - Colours
-$brand-primary: #0085A1;
+$brand-primary: rgb(33, 115, 173);
 $gray-dark: lighten(black, 25%);
 $gray: lighten(black, 50%);
-$white-faded: rgba(white, 0.8);
+$white-faded: rgba(white, .8);
 $gray-light: #eee;
+// Navbar
+$navbar-link-normal: rgba(white, .25);
+$navbar-link-hover: white;
+$navbar-link-active: white;
+$fixed-navbar-link-normal: $gray-dark;
+$fixed-navbar-link-hover: $brand-primary;
+$fixed-navbar-link-active: $brand-primary;
+// Intro header
+$intro-header-bg1: rgba(99,190,255,1);
+$intro-header-bg2: $brand-primary;
+
 
 // - Responsive breakpoints
 $bp-xl: 1200px;

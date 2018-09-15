@@ -13,7 +13,10 @@
 		font-weight: 800;
 		@media only screen and (max-width: calc($bp-lg - 1px)) {
 			padding-left: 15px;
-		}
+    }
+    &.hidden-no-scroll {
+      display: none;
+    }
 	}
 	.navbar-nav {
 		li {
@@ -69,7 +72,7 @@
 					opacity: 0.8;
 					&:hover,
 					&:focus {
-						color: white;
+						color: $navbar-link-hover;
 						opacity: 1;
 					}
 					&:after {
@@ -80,20 +83,19 @@
 						opacity: 0.8;
 						transition: max-width 0.5s ease-in-out, opacity 0.3s ease-in-out;
 						height: 2px;
-						background-color: white;
+						background-color: $navbar-link-hover;
 					}
 					&:hover:after {
 						max-width: 50%;
 						opacity: 1;
-						background-color: $brand-primary;
+						background-color: $navbar-link-hover;
 					}
 				}
-				// Active nav item underline
 				&.active a {
 					opacity: 1;
-
+          color: $navbar-link-active;
 					&:after {
-						background-color: $brand-primary;
+						background-color: $navbar-link-active;
 						opacity: 1;
 					}
 				}
@@ -112,6 +114,7 @@
 				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 			}
 			.navbar-brand {
+        display: inline-block;
 				color: $gray-dark;
 				&:hover,
 				&:focus {
@@ -121,21 +124,23 @@
 			.navbar-nav {
 				li {
 					a {
-						color: $gray-dark;
+						color: $fixed-navbar-link-normal;
 						&:hover,
 						&:focus {
-							color: $brand-primary;
+							color: $fixed-navbar-link-hover;
 							&:after {
-								background-color: $brand-primary;
+								background-color: $fixed-navbar-link-hover;
 							}
 						}
 						&:after {
-							background-color: $gray-dark;
+							background-color: $fixed-navbar-link-normal;
 						}
 					}
-					// Active nav item underline
-					&.active a:after {
-						background-color: $brand-primary;
+					&.active a {
+            color: $fixed-navbar-link-active;
+            &:after {
+              background-color: $fixed-navbar-link-active;
+            }
 					}
 				}
 			}

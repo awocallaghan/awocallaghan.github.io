@@ -4,12 +4,8 @@
   {% assign posts = site.posts %}
 {% endif %}
 
-{% assign count = 0 %}
 {% for post in posts %}
-  {% if count < 3 or small != true %}
-    {% include post/post-summary.html %}
-  {% endif %}
-  {% assign count = count | plus: 1 %}
+  {% include post/post-summary.html %}
 {% endfor %}
 
 <!-- Pager -->

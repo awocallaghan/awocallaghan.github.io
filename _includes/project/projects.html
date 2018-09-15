@@ -1,6 +1,6 @@
 {% assign i = 0 %}
 
-<div class="featured-projects flex-column flex-lg-row justify-content-center">
+<ul>
 {% for project in site.projects reversed %}
   {% if i < count %}
     {% if type == 'featured' %}
@@ -15,4 +15,4 @@
     {% endif %}
   {% endif %}
 {% endfor %}
-</div>
+</ul>
